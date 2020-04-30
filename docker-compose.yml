@@ -1,8 +1,8 @@
-version: "3.2"
+version: "3"
 services:
   helloworld_react:
     build: .
     ports:
-      - "80:80"
+      - "4100:4100"
     environment:
-      - "API_URL=https://conduit.productionready.io/api"
+        - API_ROOT="https://conduit.productionready.io/api"
