@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY ./ ./
 ARG API_ROOT
-ENV API_ROOT=${API_ROOT:-"http://localhost"}
+ENV API_ROOT=${API_ROOT:-"https://conduit.productionready.io/api"}
 
 RUN sed "s+const API_ROOT = \"\";+const API_ROOT = \"${API_ROOT}\"+g" ./src/agent.js && npm install
 
