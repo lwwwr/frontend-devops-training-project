@@ -3,6 +3,6 @@ services:
   helloworld_react:
     build: .
     ports:
-      - "4100:4100"
+      - "80:80"
     environment:
         - API_ROOT="https://conduit.productionready.io/api"
