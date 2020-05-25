@@ -15,7 +15,7 @@ COPY ./ ./
 
 #RUN echo $API_ROOT
 
-EXPOSE 4100
+EXPOSE 80
 
 RUN npm install
 
