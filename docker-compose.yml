@@ -1,8 +1,12 @@
 version: "3"
 services:
   helloworld_react:
-    build: .
+    build: 
+      context: .
+      args:
+        REACT_APP_API_ROOT_PROD: https://ready.io/api
+        REACT_APP_API_ROOT_DEV: https://conduit.productionready.io/api/
     ports:
-      - "4100:4100"
-    environment:
-        - "REACT_APP_API_ROOT=https://conduit.productionready.io/api"
+      - "80:80"
+    # environment:
+    #     - "REACT_APP_API_ROOT_PROD=https://productionready.io/api"
